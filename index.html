@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <div class="calculator">
+        <main id="calMemory">
+            <div id="history" style="position: relative;">
+                <img src="assets/icons8-menu-vertical-32.png" alt="Menu" onclick="toggleDropdown()">
+                <div id="dropdown">
+                    <div class="dropdown-option" onclick="showHistory()">History</div>
+                    <div class="dropdown-option" onclick="showAbout()">About</div>
+                </div>
+            </div>
+            <div id="memory-display" style="display: none;"></div>
+            <div id="about" style="display: none;">
+                <p>Using JS HTML CSS calculator.</p>
+            </div>
+
+        </main>
+
+
+        <div id="backspace">
+            <img src="assets/icons8-clear-50%20(1).png" onclick="backspace()">
+        </div>
+        <input id="display" readonly>
+        <div class="button-row">
+            <button class="operator" onclick="clearAll()">AC</button>
+            <button class="operator" onclick="fn('%')">%</button>
+            <button class="operator" onclick="fn('+')">+</button>
+            <button class="operator" onclick="fn('-')">-</button>
+        </div>
+        <div class="button-row">
+            <button class="number" onclick="fn(7)">7</button>
+            <button class="number" onclick="fn(8)">8</button>
+            <button class="number" onclick="fn(9)">9</button>
+            <button class="operator" onclick="fn('*')">x</button>
+        </div>
+        <div class="button-row">
+            <button class="number" onclick="fn(4)">4</button>
+            <button class="number" onclick="fn(5)">5</button>
+            <button class="number" onclick="fn(6)">6</button>
+            <button class="operator" onclick="fn('/')">/</button>
+        </div>
+        <div class="button-row">
+            <button class="number" onclick="fn(1)">1</button>
+            <button class="number" onclick="fn(2)">2</button>
+            <button class="number" onclick="fn(3)">3</button>
+            <button class="operator" onclick="eq()">=</button>
+        </div>
+        <div class="button-row">
+            <button class="number" onclick="fn(0)">0</button>
+            <button class="number" onclick="fn('.')">.</button>
+        </div>
+    </div>
+</main>
+<script src="lib/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
